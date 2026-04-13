@@ -24,11 +24,12 @@ def classificar_imc(imc):
 
 st.title("Calculadora de IMC")
 
-peso = st.number_input("Peso (kg)", min_value=0.0)
-altura = st.number_input("Altura (m)", min_value=0.0)
+# Inputs sem valor padrão
+peso = st.number_input("Peso (kg)", min_value=0.0, value=None, placeholder="Ex: 70")
+altura = st.number_input("Altura (m)", min_value=0.0, value=None, placeholder="Ex: 1.75")
 
 if st.button("Calcular"):
-    if altura > 0:
+    if peso is not None and altura is not None and altura > 0:
         imc = dsa_calcula_imc(peso, altura)
         classificacao, descricao, dica = classificar_imc(imc)
 
@@ -37,6 +38,4 @@ if st.button("Calcular"):
         st.write(descricao)
         st.warning(f"Dica: {dica}")
     else:
-        st.error("Altura deve ser maior que zero")
-        
-
+        st.error("Preencha peso e altura corretamente")
