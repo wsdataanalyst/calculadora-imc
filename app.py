@@ -14,3 +14,4 @@ if st.button("Calcular"):
         st.success(f"Seu IMC é: {imc:.2f}")
     else:
         st.error("Altura deve ser maior que zero")
+        
