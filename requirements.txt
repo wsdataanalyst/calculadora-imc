@@ -1,11 +1,2 @@
-<<<<<<< HEAD
 streamlit
 pandas
-matplotlib
-bcrypt
-plotly
-=======
-streamlit==1.49.1
-pandas==2.2.3
-
->>>>>>> 40c250dbe7e281fcb029afb1f064dbf650e7e761
